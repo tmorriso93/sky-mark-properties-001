@@ -37,7 +37,7 @@ export default async function MyFavourites({
     console.log({ paginatedFavourites, properties });
 
     return (
-        <div className="max-w-screen-lg mx-auto">
+        <div className="max-w-screen-lg mx-auto max-sm:max-w-[400px]">
             <h1 className="text-4xl font-bold py-4 mt-5">My favourites</h1>
             {!paginatedFavourites.length && ( 
             <h2 className="text-center text-zinc-400 text-3xl font-bold py-10">
@@ -46,11 +46,11 @@ export default async function MyFavourites({
             )}
             {/* only render table if there are paginated favourites */}
             {!!paginatedFavourites.length && (
-            <Table className="mt-4">
+            <Table className="mt-4 ">
                 <TableHeader>
                     <TableRow>
                         <TableHead>Property</TableHead>
-                        <TableHead>Statusy</TableHead>
+                        <TableHead>Status</TableHead>
                         <TableHead/>
                     </TableRow>
                 </TableHeader>
